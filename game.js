@@ -164,7 +164,7 @@ function startGame() {
 // Load Table
 async function loadTable() {
     try {
-        const response = await fetch('http://127.0.0.1:5000/check', {
+        const response = await fetch('https://crime-detection-quest.onrender.com/check', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -253,7 +253,7 @@ async function runQuery() {
 
     try {
 
-        const response = await fetch('http://127.0.0.1:5000/check', {
+        const response = await fetch('https://crime-detection-quest.onrender.com/check', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
