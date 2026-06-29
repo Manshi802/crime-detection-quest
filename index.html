@@ -1,0 +1,88 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Crime Detective Quest 🔍</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body> 
+ <div id="intro-screen">
+    <div class="intro-box">
+        <h1>🔍 Crime Detection Quest</h1>
+
+        <p>
+            🕵️ A mysterious crime has happened in the city...  
+            The database is corrupted and only YOU can solve it.
+        </p>
+
+        <p>
+            Use SQL queries, find suspects, and catch the culprit.
+        </p>
+
+        <button onclick="document.getElementById('intro-screen').style.display='none'">
+            Start Investigation 🚀
+        </button>
+    </div>
+    </div>
+
+    <div id="game-container">  <!-- Header -->  
+    <div id="header">  
+        <h1>🔍 Crime Detection Quest</h1>  
+        <div id="stats">  
+            <span id="score-display">Score: 0</span>  
+            <span id="level-display">Level: 1/5</span>  
+            <span id="timer-display">⏱️ 90s</span>  
+        </div>  
+    </div>  
+    <div id="progress-container">  
+<div id="progress-bar">  
+    <div id="progress-fill"></div>  
+</div>
+
+</div>  <!-- Mystery Box -->  
+    <div id="mystery-box">  
+        <h2 id="mystery-title">🕵️ Mystery</h2>  
+        <p id="mystery-text"></p>  
+    </div>  
+
+    <!-- Database Table -->  
+    <div id="table-container">  
+        <h3>📊 Suspects Database</h3>  
+        <div id="db-table"></div>  
+    </div>  
+
+    <!-- SQL Input -->  
+    <div id="input-section">  
+        <h3>💻 Write Your SQL Query:</h3>  
+        <textarea id="sql-input"   
+            placeholder="SELECT * FROM suspects WHERE ..."></textarea>  
+        <div id="buttons">  
+            <button id="run-btn" onclick="runQuery()">  
+                ▶ Run Query  
+            </button>  
+            <button id="hint-btn" onclick="getHint()">  
+                💡 Get Hint  
+            </button>  
+        </div>  
+    </div>  
+
+    <!-- Result -->  
+    <div id="result-box">  
+        <h3>📋 Result:</h3>  
+        <div id="result-display"></div>  
+    </div>  
+
+    <!-- Feedback -->  
+    <div id="feedback-box" style="display:none">  
+        <p id="feedback-text"></p>  
+        <button onclick="nextLevel()">Next Level →</button>  
+    </div>  
+
+</div>  
+<script src="game.js"></script>  
+<audio id="correct-sound" src="correct.mp3"></audio>
+
+<audio id="wrong-sound" src="wrong.mp3"></audio>
+
+</body>  
+</html>
